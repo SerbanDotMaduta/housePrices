@@ -14,13 +14,14 @@ The project has 4 major components:
 Download docker image from https://hub.docker.com/r/serbanmad/houseprice.
 
 Rename docker container:
-docker tag serbanmad/houseprice:latest {newName}
+docker tag serbanmad/houseprice:latest houseprice:latest
 
-Launch backend command: 
-docker run -d --net=host --name backend {newName} /housePrice/web/startBack.sh
+Download this file:
+https://github.com/SerbanDotMaduta/housePrices/blob/master/docker-compose.yml
+You can create a file named docker-compose.yml and copy+paste contents.
 
-Launch frontend command: 
-docker run -d --net=host --name frontend {newName} /housePrice/web/startFront.sh
+Run this command in the directory where docker-compose.yml is located:
+docker-compose up
 
 Access application in your web browser at:
-http://localhost:3000
+http://localhost:3001
